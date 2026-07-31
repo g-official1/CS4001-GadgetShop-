@@ -2,8 +2,7 @@
  * The Gadget class is the superclass for the gadgets sold in the shop.
  * It holds the basic details that every gadget has.
  *
- * @author  Student
- * @version 1.0
+ * @author  Grady Mpila
  */
 public class Gadget
 {

@@ -5,21 +5,13 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * The GadgetShop class is the GUI for the shop system.
- * It stores all of the gadgets in an ArrayList and lets the user add
- * mobile phones, MP3 players, make calls, download music, etc.
+
  *
- * This class has a main method so that it can be run from the command
- * prompt using "java GadgetShop".
- *
- * @author  Student
- * @version 1.0
+ * @author  Grady Mpila
  */
 public class GadgetShop extends JFrame implements ActionListener
 {
-    // -----------------------------------------------------------------
-    // Text fields used in the GUI (one for each value the user can enter)
-    // -----------------------------------------------------------------
+   
     private JTextField modelField;              // for the model name
     private JTextField priceField;              // for the price in pounds
     private JTextField weightField;             // for the weight in grams
@@ -31,9 +23,7 @@ public class GadgetShop extends JFrame implements ActionListener
     private JTextField downloadSizeField;       // size of the music to download
     private JTextField displayNumberField;      // position of gadget in list
 
-    // -----------------------------------------------------------------
-    // Buttons used in the GUI
-    // -----------------------------------------------------------------
+   
     private JButton addMobileButton;            // add a new Mobile phone
     private JButton addMP3Button;               // add a new MP3 player
     private JButton clearButton;                // clear every text field
@@ -41,9 +31,7 @@ public class GadgetShop extends JFrame implements ActionListener
     private JButton makeCallButton;             // make a call on a Mobile
     private JButton downloadMusicButton;        // download music on an MP3
 
-    // -----------------------------------------------------------------
-    // The ArrayList that holds every gadget that has been added so far
-    // -----------------------------------------------------------------
+    
     private ArrayList<Gadget> gadgets;
 
     /**
@@ -65,7 +53,6 @@ public class GadgetShop extends JFrame implements ActionListener
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Use a simple grid layout so labels and text fields line up neatly.
-        // Using 0 rows means "as many as needed", with 2 columns.
         setLayout(new GridLayout(0, 2, 5, 5));
 
         // ----- Create the text fields and add them with labels -----
@@ -109,7 +96,7 @@ public class GadgetShop extends JFrame implements ActionListener
         add(new JLabel(" Display Number:"));
         add(displayNumberField);
 
-        // ----- Create the buttons, add them, and set up listeners -----
+        // Create the buttons
         addMobileButton = new JButton("Add Mobile");
         addMP3Button = new JButton("Add MP3");
         clearButton = new JButton("Clear");
@@ -138,12 +125,6 @@ public class GadgetShop extends JFrame implements ActionListener
         setVisible(true);
     }
 
-    // =================================================================
-    // TEXT FIELD INPUT METHODS
-    // Each method reads the text from one of the text fields and
-    // converts it to the correct data type before returning it.
-    // =================================================================
-
     /**
      * Returns the model as a String straight from the text field.
      */
@@ -154,7 +135,6 @@ public class GadgetShop extends JFrame implements ActionListener
 
     /**
      * Returns the price as a double. The text is parsed using
-     * Double.parseDouble so "19.99" becomes the number 19.99.
      */
     public double getPrice()
     {
@@ -162,7 +142,7 @@ public class GadgetShop extends JFrame implements ActionListener
     }
 
     /**
-     * Returns the weight as an int.
+     * the weight becomes an int.
      */
     public int getWeight()
     {
@@ -331,7 +311,7 @@ public class GadgetShop extends JFrame implements ActionListener
 
     /**
      * Reads the model, price, weight, size and memory from the GUI,
-     * builds a new MP3 object and adds it to the ArrayList.
+     builds a new MP3 object and adds it to the ArrayList.
      */
     private void addMP3()
     {

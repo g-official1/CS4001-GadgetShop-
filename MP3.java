@@ -2,8 +2,7 @@
  * The MP3 class is a subclass of Gadget. It represents an MP3 player
  * and adds the amount of available memory that the player has.
  *
- * @author  Student
- * @version 1.0
+ * @author  Grady Mpila
  */
 public class MP3 extends Gadget
 {

@@ -2,8 +2,7 @@
  * The Mobile class is a subclass of Gadget. It represents a mobile phone
  * and adds the number of minutes of calling credit that the phone has left.
  *
- * @author  Student
- * @version 1.0
+ * @author  Grady Mpila
  */
 public class Mobile extends Gadget
 {
